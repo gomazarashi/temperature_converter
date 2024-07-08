@@ -16,7 +16,7 @@ fn main() {
                     }
                 };
 
-                let result = temperature_converter(&degree_type, degree);
+                let result = convert_temperature(&degree_type, degree);
                 println!("変換結果: {}", result);
             }
             _ => println!("無効な形式です。'C' または 'F' を入力して下さい。"),
@@ -32,7 +32,7 @@ fn read_input() -> String {
     return input;
 }
 
-fn temperature_converter(degree_type: &str, degree: f64) -> f64 {
+fn convert_temperature(degree_type: &str, degree: f64) -> f64 {
     if degree_type == "C" {
         degree * (9.0 / 5.0) + 32.0
     } else {
