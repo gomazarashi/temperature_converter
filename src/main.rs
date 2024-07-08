@@ -17,7 +17,7 @@ fn main() {
                 };
 
                 let result = convert_temperature(&degree_type, degree);
-                println!("変換結果: {}", result);
+                println!("変換結果: {} {}", result, if degree_type == "C" { "F" } else { "C" });
             }
             _ => println!("無効な形式です。'C' または 'F' を入力して下さい。"),
         }
